@@ -26,11 +26,20 @@ export default function BrochureSection() {
       brochureEl.style.left = "-9999px";
       brochureEl.style.top = "0";
 
+      // Wait for browser repaint/reflow and image loading
+      await new Promise((resolve) => setTimeout(resolve, 350));
+
       const opt = {
         margin: 0,
         filename: "Prabhat_Iron_Works_Brochure.pdf",
-        image: { type: "jpeg", quality: 0.95 },
-        html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { 
+          scale: 2, 
+          useCORS: true, 
+          letterRendering: true,
+          logging: false,
+          backgroundColor: "#FFFFFF" 
+        },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" as const },
         pagebreak: { mode: ["css", "legacy"] as string[] },
       };
