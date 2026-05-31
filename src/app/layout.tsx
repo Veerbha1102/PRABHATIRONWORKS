@@ -53,6 +53,27 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="font-sans antialiased">
+        {/* ── Suppress Tawk.to / CORS log console errors during local development ── */}
+        <Script id="suppress-console-errors" strategy="beforeInteractive">
+          {`
+            (function() {
+              if (typeof window !== 'undefined') {
+                var orgError = console.error;
+                console.error = function() {
+                  var firstArg = arguments[0];
+                  if (firstArg === true || firstArg === 'true' || 
+                      (typeof firstArg === 'string' && 
+                        (firstArg.indexOf('tawk') !== -1 || firstArg.indexOf('WebSocket') !== -1)
+                      )) {
+                    return;
+                  }
+                  orgError.apply(console, arguments);
+                };
+              }
+            })();
+          `}
+        </Script>
+
         {children}
 
         {/* ── Tawk.to Live Chat Widget ── */}
