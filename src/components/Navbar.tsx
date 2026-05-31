@@ -201,7 +201,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary/90 text-white shadow-xl shadow-primary/30 backdrop-blur-sm"
+            className="fixed bottom-8 left-8 z-50 p-3 rounded-full bg-primary/90 text-white shadow-xl shadow-primary/30 backdrop-blur-sm"
             aria-label="Back to top"
           >
             <ChevronUp size={20} />
