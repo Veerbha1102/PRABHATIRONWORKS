@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/PRABHATIRONWORKS",
   images: {
-    formats: ["image/webp", "image/avif"],
+    unoptimized: true,
   },
 };
 
