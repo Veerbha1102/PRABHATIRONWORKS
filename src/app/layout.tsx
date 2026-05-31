@@ -52,95 +52,90 @@ export default function RootLayout({
         <link rel="icon" href="/PRABHATIRONWORKS/favicon.ico" />
         
         {/* ── JSON-LD Structured Data Schema for Local Business / Google Search & Maps SEO ── */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Prabhat Iron Works",
-              "image": "https://veerbha1102.github.io/PRABHATIRONWORKS/images/logo.png",
-              "@id": "https://veerbha1102.github.io/PRABHATIRONWORKS",
-              "url": "https://veerbha1102.github.io/PRABHATIRONWORKS",
-              "telephone": "+919825216584",
-              "priceRange": "₹₹",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "14, Geeta Nagar, Atkot Road",
-                "addressLocality": "Jasdan",
-                "addressRegion": "Gujarat",
-                "postalCode": "360050",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 22.0185,
-                "longitude": 71.2185
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday"
-                ],
-                "opens": "09:00",
-                "closes": "19:00"
-              },
-              "sameAs": [
-                "https://github.com/Veerbha1102/PRABHATIRONWORKS"
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Prabhat Iron Works",
+            "image": "https://veerbha1102.github.io/PRABHATIRONWORKS/images/logo.png",
+            "@id": "https://veerbha1102.github.io/PRABHATIRONWORKS",
+            "url": "https://veerbha1102.github.io/PRABHATIRONWORKS",
+            "telephone": "+919825216584",
+            "priceRange": "₹₹",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "14, Geeta Nagar, Atkot Road",
+              "addressLocality": "Jasdan",
+              "addressRegion": "Gujarat",
+              "postalCode": "360050",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 22.0185,
+              "longitude": 71.2185
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
               ],
-              "areaServed": [
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Gujarat"
-                },
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Rajasthan"
-                },
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Madhya Pradesh"
-                },
-                {
-                  "@type": "AdministrativeArea",
-                  "name": "Maharashtra"
-                }
-              ],
-              "knowsAbout": [
-                "Groundnut Decorticators",
-                "Almond Decorticators",
-                "Garlic Separators",
-                "Agricultural Threshers",
-                "Agricultural Machinery Manufacturing"
-              ]
-            })
-          }}
-        />
+              "opens": "09:00",
+              "closes": "19:00"
+            },
+            "sameAs": [
+              "https://github.com/Veerbha1102/PRABHATIRONWORKS"
+            ],
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Gujarat"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Rajasthan"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Madhya Pradesh"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Maharashtra"
+              }
+            ],
+            "knowsAbout": [
+              "Groundnut Decorticators",
+              "Almond Decorticators",
+              "Garlic Separators",
+              "Agricultural Threshers",
+              "Agricultural Machinery Manufacturing"
+            ]
+          })}
+        </script>
         {/* ── Suppress Tawk.to / CORS log console errors during local development ── */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var orgError = console.error;
-                console.error = function() {
-                  var firstArg = arguments[0];
-                  if (firstArg === true || firstArg === 'true' || 
-                      (typeof firstArg === 'string' && 
-                        (firstArg.indexOf('tawk') !== -1 || firstArg.indexOf('WebSocket') !== -1)
-                      )) {
-                    return;
-                  }
-                  orgError.apply(console, arguments);
-                };
-              })();
-            `
-          }}
-        />
+        <script>
+          {`
+            (function() {
+              var orgError = console.error;
+              console.error = function() {
+                var firstArg = arguments[0];
+                if (firstArg === true || firstArg === 'true' || 
+                    (typeof firstArg === 'string' && 
+                      (firstArg.indexOf('tawk') !== -1 || firstArg.indexOf('WebSocket') !== -1)
+                    )) {
+                  return;
+                }
+                orgError.apply(console, arguments);
+              };
+            })();
+          `}
+        </script>
       </head>
       <body className="font-sans antialiased">
         {children}
@@ -152,7 +147,7 @@ export default function RootLayout({
             (function(){
               var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
               s1.async = true;
-              s1.src = 'https://embed.tawk.to/6a1c26f033b64c1c2ac9099e/1jpuvg79t';
+              s1.src = 'https://embed.tawk.to/6a1c26f033b64c1c2ac9099e/1jpv9m9bt';
               s1.charset = 'UTF-8';
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1, s0);

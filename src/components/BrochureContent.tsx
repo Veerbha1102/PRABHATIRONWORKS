@@ -16,27 +16,39 @@ export default function BrochureContent() {
 
   return (
     <div
-      id="brochure-content"
       style={{
-        display: "none",
-        width: "210mm",
-        fontFamily: "'Segoe UI', Arial, sans-serif",
-        color: textColor,
-        backgroundColor: "#FFFFFF",
+        position: "absolute",
+        left: "0",
+        top: "0",
+        width: "0",
+        height: "0",
+        overflow: "hidden",
+        opacity: 0,
+        pointerEvents: "none",
       }}
     >
+      <div
+        id="brochure-content"
+        style={{
+          width: "210mm",
+          fontFamily: "'Segoe UI', Arial, sans-serif",
+          color: textColor,
+          backgroundColor: "#FFFFFF",
+        }}
+      >
       {/* ═══ COVER PAGE ═══ */}
       <div
         style={{
           pageBreakAfter: "always",
-          height: "297mm",
+          height: "245mm",
+          boxSizing: "border-box",
           background: "#FAF9F6", // Warm off-white
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          padding: "40mm 20mm",
+          padding: "20mm 15mm",
           position: "relative",
           overflow: "hidden",
         }}
@@ -180,31 +192,31 @@ export default function BrochureContent() {
       <div
         style={{
           pageBreakAfter: "always",
-          padding: "15mm 20mm",
+          padding: "10mm 15mm",
           backgroundColor: lightBg,
-          minHeight: "297mm",
+          boxSizing: "border-box",
         }}
       >
         <div
           style={{
-            borderBottom: `3px solid ${primaryColor}`,
-            paddingBottom: "10px",
-            marginBottom: "24px",
+            borderBottom: `3.5px solid ${primaryColor}`,
+            paddingBottom: "6px",
+            marginBottom: "16px",
           }}
         >
-          <h2 style={{ fontSize: "24px", fontWeight: "700", color: darkColor }}>
+          <h2 style={{ fontSize: "20px", fontWeight: "700", color: darkColor }}>
             About Prabhat Iron Works
           </h2>
         </div>
 
-        <p style={{ fontSize: "13px", lineHeight: "1.8", marginBottom: "20px", color: textColor }}>
+        <p style={{ fontSize: "12px", lineHeight: "1.7", marginBottom: "12px", color: textColor }}>
           Established in Jasdan, Gujarat, Prabhat Iron Works has been a pioneering force in
           agricultural machinery manufacturing for over 12 years. Our state-of-the-art facility
           at 14, Geeta Nagar, Atkot Road, produces high-quality decorticators, threshers, and
           separators trusted by farmers across 15+ states in India.
         </p>
 
-        <p style={{ fontSize: "13px", lineHeight: "1.8", marginBottom: "30px", color: textColor }}>
+        <p style={{ fontSize: "12px", lineHeight: "1.7", marginBottom: "16px", color: textColor }}>
           We combine traditional Indian engineering expertise with modern manufacturing techniques
           to deliver machinery that is reliable, efficient, and built to withstand the demanding
           conditions of Indian agriculture.
@@ -214,8 +226,8 @@ export default function BrochureContent() {
         <div
           style={{
             display: "flex",
-            gap: "16px",
-            marginBottom: "30px",
+            gap: "12px",
+            marginBottom: "16px",
           }}
         >
           {[
@@ -229,16 +241,16 @@ export default function BrochureContent() {
               style={{
                 flex: 1,
                 textAlign: "center",
-                padding: "16px 12px",
+                padding: "10px 8px",
                 backgroundColor: "#FFFFFF",
                 borderRadius: "8px",
                 border: `1px solid ${primaryColor}20`,
               }}
             >
-              <div style={{ fontSize: "24px", fontWeight: "700", color: primaryColor }}>
+              <div style={{ fontSize: "20px", fontWeight: "700", color: primaryColor }}>
                 {stat.value}
               </div>
-              <div style={{ fontSize: "10px", color: "#666", marginTop: "4px", textTransform: "uppercase", letterSpacing: "1px" }}>
+              <div style={{ fontSize: "9px", color: "#666", marginTop: "4px", textTransform: "uppercase", letterSpacing: "1px" }}>
                 {stat.label}
               </div>
             </div>
@@ -248,16 +260,16 @@ export default function BrochureContent() {
         {/* Mission */}
         <div
           style={{
-            padding: "20px 24px",
+            padding: "12px 16px",
             backgroundColor: "#FFFFFF",
             borderRadius: "12px",
             borderLeft: `4px solid ${accentColor}`,
           }}
         >
-          <h3 style={{ fontSize: "16px", fontWeight: "600", color: darkColor, marginBottom: "8px" }}>
+          <h3 style={{ fontSize: "14px", fontWeight: "600", color: darkColor, marginBottom: "4px" }}>
             Our Mission
           </h3>
-          <p style={{ fontSize: "12px", lineHeight: "1.7", color: "#555" }}>
+          <p style={{ fontSize: "11px", lineHeight: "1.6", color: "#555" }}>
             To empower Indian farmers with world-class agricultural machinery that maximizes
             productivity, minimizes waste, and delivers exceptional value. Every machine we build
             is a commitment to India&apos;s agricultural future.
@@ -265,11 +277,11 @@ export default function BrochureContent() {
         </div>
 
         {/* Quality certifications */}
-        <div style={{ marginTop: "24px" }}>
-          <h3 style={{ fontSize: "16px", fontWeight: "600", color: darkColor, marginBottom: "12px" }}>
+        <div style={{ marginTop: "16px" }}>
+          <h3 style={{ fontSize: "14px", fontWeight: "600", color: darkColor, marginBottom: "8px" }}>
             Why Choose Us
           </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
             {[
               "Premium MS & SS Materials",
               "Rigorous Load Testing",
@@ -281,8 +293,8 @@ export default function BrochureContent() {
               <span
                 key={item}
                 style={{
-                  padding: "6px 14px",
-                  fontSize: "10px",
+                  padding: "4px 10px",
+                  fontSize: "9px",
                   backgroundColor: `${primaryColor}15`,
                   color: primaryColor,
                   borderRadius: "20px",
@@ -302,9 +314,9 @@ export default function BrochureContent() {
           key={product.id}
           style={{
             pageBreakAfter: idx < products.length - 1 ? "always" : "auto",
-            padding: "15mm 20mm",
+            padding: "10mm 15mm",
             backgroundColor: idx % 2 === 0 ? "#FFFFFF" : lightBg,
-            minHeight: "280mm",
+            boxSizing: "border-box",
           }}
         >
           {/* Product header */}
@@ -313,57 +325,57 @@ export default function BrochureContent() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-start",
-              borderBottom: `3px solid ${primaryColor}`,
-              paddingBottom: "10px",
-              marginBottom: "20px",
+              borderBottom: `3.5px solid ${primaryColor}`,
+              paddingBottom: "6px",
+              marginBottom: "12px",
             }}
           >
             <div>
               <span
                 style={{
-                  fontSize: "10px",
+                  fontSize: "9px",
                   color: primaryColor,
                   textTransform: "uppercase",
-                  letterSpacing: "2px",
+                  letterSpacing: "1.5px",
                   fontWeight: "600",
                 }}
               >
                 {product.categoryLabel}
               </span>
-              <h2 style={{ fontSize: "22px", fontWeight: "700", color: darkColor, marginTop: "4px" }}>
+              <h2 style={{ fontSize: "17px", fontWeight: "700", color: darkColor, marginTop: "2px" }}>
                 {product.name}
               </h2>
             </div>
             <div
               style={{
-                padding: "8px 16px",
+                padding: "6px 12px",
                 backgroundColor: `${accentColor}15`,
                 borderRadius: "8px",
                 textAlign: "right",
               }}
             >
-              <div style={{ fontSize: "10px", color: "#888", textTransform: "uppercase" }}>Price Range</div>
-              <div style={{ fontSize: "14px", fontWeight: "700", color: accentColor }}>
+              <div style={{ fontSize: "9px", color: "#888", textTransform: "uppercase" }}>Price Range</div>
+              <div style={{ fontSize: "13px", fontWeight: "700", color: accentColor }}>
                 {product.priceRange}
               </div>
             </div>
           </div>
 
           {/* Description */}
-          <p style={{ fontSize: "12px", lineHeight: "1.7", color: "#555", marginBottom: "20px" }}>
+          <p style={{ fontSize: "11px", lineHeight: "1.6", color: "#555", marginBottom: "10px" }}>
             {product.description}
           </p>
 
           {/* Specifications Table */}
-          <h3 style={{ fontSize: "14px", fontWeight: "600", color: darkColor, marginBottom: "10px" }}>
+          <h3 style={{ fontSize: "12px", fontWeight: "600", color: darkColor, marginBottom: "6px" }}>
             Technical Specifications
           </h3>
           <table
             style={{
               width: "100%",
               borderCollapse: "collapse",
-              marginBottom: "20px",
-              fontSize: "11px",
+              marginBottom: "10px",
+              fontSize: "9.5px",
             }}
           >
             <tbody>
@@ -376,7 +388,7 @@ export default function BrochureContent() {
                 >
                   <td
                     style={{
-                      padding: "8px 12px",
+                      padding: "5px 8px",
                       color: "#666",
                       borderBottom: "1px solid #E5E7EB",
                       width: "45%",
@@ -386,7 +398,7 @@ export default function BrochureContent() {
                   </td>
                   <td
                     style={{
-                      padding: "8px 12px",
+                      padding: "5px 8px",
                       color: darkColor,
                       fontWeight: "500",
                       borderBottom: "1px solid #E5E7EB",
@@ -400,21 +412,21 @@ export default function BrochureContent() {
           </table>
 
           {/* Features */}
-          <h3 style={{ fontSize: "14px", fontWeight: "600", color: darkColor, marginBottom: "10px" }}>
+          <h3 style={{ fontSize: "12px", fontWeight: "600", color: darkColor, marginBottom: "6px" }}>
             Key Features
           </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "16px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", marginBottom: "10px" }}>
             {product.features.map((f) => (
               <div
                 key={f}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "6px",
-                  padding: "5px 10px",
-                  fontSize: "10px",
+                  gap: "4px",
+                  padding: "4px 8px",
+                  fontSize: "9px",
                   backgroundColor: `${primaryColor}10`,
-                  borderRadius: "6px",
+                  borderRadius: "5px",
                   color: "#444",
                 }}
               >
@@ -429,10 +441,10 @@ export default function BrochureContent() {
             style={{
               display: "flex",
               gap: "16px",
-              padding: "12px 16px",
+              padding: "8px 12px",
               backgroundColor: `${darkColor}08`,
               borderRadius: "8px",
-              fontSize: "10px",
+              fontSize: "9px",
               color: "#666",
             }}
           >
@@ -446,9 +458,9 @@ export default function BrochureContent() {
       {/* ═══ CONTACT PAGE ═══ */}
       <div
         style={{
-          padding: "15mm 20mm",
+          padding: "10mm 15mm",
           background: "#FAF9F6", // Warm off-white
-          minHeight: "297mm",
+          boxSizing: "border-box",
           color: "#111827",
           display: "flex",
           flexDirection: "column",
@@ -460,21 +472,21 @@ export default function BrochureContent() {
         <div
           style={{
             position: "absolute",
-            top: "15mm",
-            bottom: "15mm",
-            left: "15mm",
-            right: "15mm",
+            top: "10mm",
+            bottom: "10mm",
+            left: "10mm",
+            right: "10mm",
             border: `1px solid ${primaryColor}30`,
             borderRadius: "4px",
             pointerEvents: "none",
           }}
         />
 
-        <div style={{ textAlign: "center", marginBottom: "40px" }}>
-          <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#111827", marginBottom: "8px", fontFamily: "'Outfit', sans-serif" }}>
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <h2 style={{ fontSize: "22px", fontWeight: "700", color: "#111827", marginBottom: "6px", fontFamily: "'Outfit', sans-serif" }}>
             Get in Touch
           </h2>
-          <p style={{ fontSize: "13px", color: "#4B5563" }}>
+          <p style={{ fontSize: "12px", color: "#4B5563" }}>
             Ready to upgrade your agricultural processing? Contact us today.
           </p>
         </div>
@@ -482,7 +494,7 @@ export default function BrochureContent() {
         <div
           style={{
             display: "flex",
-            gap: "20px",
+            gap: "16px",
             justifyContent: "center",
             flexWrap: "wrap",
             margin: "0 10px",
@@ -497,8 +509,8 @@ export default function BrochureContent() {
               key={item.title}
               style={{
                 flex: "1",
-                minWidth: "160px",
-                padding: "24px 16px",
+                minWidth: "150px",
+                padding: "16px 12px",
                 backgroundColor: "#FFFFFF",
                 borderRadius: "12px",
                 textAlign: "center",
@@ -506,11 +518,11 @@ export default function BrochureContent() {
                 boxShadow: "0 4px 12px rgba(0,0,0,0.02)",
               }}
             >
-              <div style={{ fontSize: "28px", marginBottom: "12px" }}>{item.icon}</div>
-              <h3 style={{ fontSize: "13px", fontWeight: "700", color: primaryColor, marginBottom: "8px" }}>
+              <div style={{ fontSize: "20px", marginBottom: "8px" }}>{item.icon}</div>
+              <h3 style={{ fontSize: "12px", fontWeight: "700", color: primaryColor, marginBottom: "6px" }}>
                 {item.title}
               </h3>
-              <p style={{ fontSize: "11px", lineHeight: "1.6", color: "#4B5563", whiteSpace: "pre-line", fontWeight: "500" }}>
+              <p style={{ fontSize: "10.5px", lineHeight: "1.5", color: "#4B5563", whiteSpace: "pre-line", fontWeight: "500" }}>
                 {item.info}
               </p>
             </div>
@@ -532,5 +544,6 @@ export default function BrochureContent() {
         </div>
       </div>
     </div>
+  </div>
   );
 }

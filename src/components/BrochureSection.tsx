@@ -26,14 +26,8 @@ export default function BrochureSection() {
         return;
       }
 
-      // Make visible for rendering
-      brochureEl.style.display = "block";
-      brochureEl.style.position = "absolute";
-      brochureEl.style.left = "-9999px";
-      brochureEl.style.top = "0";
-
-      // Wait for browser repaint/reflow and image loading
-      await new Promise((resolve) => setTimeout(resolve, 350));
+      // Wait a split second to ensure standard repaint
+      await new Promise((resolve) => setTimeout(resolve, 150));
 
       const opt = {
         margin: 0,
@@ -51,11 +45,6 @@ export default function BrochureSection() {
       };
 
       await html2pdf().set(opt).from(brochureEl).save();
-
-      brochureEl.style.display = "none";
-      brochureEl.style.position = "";
-      brochureEl.style.left = "";
-      brochureEl.style.top = "";
 
       setGenerated(true);
       setTimeout(() => setGenerated(false), 3000);

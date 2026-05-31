@@ -41,10 +41,33 @@ export default function ContactSection() {
 
     setStatus("sending");
 
-    // Simulate form submission to a backend or dashboard
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1800));
+      // 1. Simulate server handshake delay
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+      
+      // 2. Set success state to render visual success cards and trigger animations
       setStatus("success");
+
+      // 3. Format a premium, bold WhatsApp message with customer details
+      const formattedMessage = encodeURIComponent(
+        `*Hello Prabhat Iron Works,*\n\n` +
+        `I am visiting your website and would like to make an inquiry:\n\n` +
+        `• *Name*: ${formData.name}\n` +
+        `• *Phone*: ${formData.phone}\n` +
+        `• *Email*: ${formData.email || "Not Provided"}\n` +
+        `• *Machine*: ${formData.product || "Other / Custom Equipment"}\n` +
+        `• *Message*: ${formData.message}`
+      );
+
+      // 4. Redirect the user to WhatsApp Web/App pre-filled with the message
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=919825216584&text=${formattedMessage}`;
+      
+      // Delay slightly for the success animation to be seen by the user
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+      }, 800);
+
+      // 5. Clean the form fields
       setFormData({
         name: "",
         email: "",
