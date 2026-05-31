@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, ChevronUp } from "lucide-react";
 import Image from "next/image";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -93,13 +94,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-3 cursor-pointer"
             >
-              <Image
-                src="/images/logo.png"
-                alt="Prabhat Iron Works"
-                width={44}
-                height={44}
-                className="rounded-lg"
-              />
+              <Logo size={44} animate={true} />
               <div className="hidden sm:block">
                 <h1 className="text-base font-display font-bold text-white leading-tight">
                   Prabhat Iron Works

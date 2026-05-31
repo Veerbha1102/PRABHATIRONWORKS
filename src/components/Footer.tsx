@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, ArrowUp } from "lucide-react";
 import Image from "next/image";
+import Logo from "@/components/Logo";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -36,13 +37,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <Image
-                src="/images/logo.png"
-                alt="Prabhat Iron Works"
-                width={40}
-                height={40}
-                className="rounded-lg"
-              />
+              <Logo size={40} animate={true} />
               <div>
                 <h3 className="text-base font-display font-bold text-white">
                   Prabhat Iron Works
