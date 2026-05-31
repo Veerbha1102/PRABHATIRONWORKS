@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/PRABHATIRONWORKS/favicon.ico" />
       </head>
       <body className="font-sans antialiased">
         {/* ── Suppress Tawk.to / CORS log console errors during local development ── */}

@@ -80,7 +80,7 @@ export default function HeroSection() {
       {/* Background Image with Parallax */}
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
         <Image
-          src="/images/hero-bg.png"
+          src="/PRABHATIRONWORKS/images/hero-bg.png"
           alt="Industrial machinery workshop"
           fill
           priority

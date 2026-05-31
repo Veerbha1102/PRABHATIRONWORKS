@@ -34,7 +34,7 @@ export const products: Product[] = [
     slug: "groundnut-decorticator",
     category: "decorticator",
     categoryLabel: "Decorticator",
-    image: "/images/products/groundnut-decorticator.webp",
+    image: "/PRABHATIRONWORKS/images/products/groundnut-decorticator.webp",
     description:
       "Heavy-duty Groundnut Decorticator designed for efficient shelling of groundnuts with minimal kernel breakage. Built with a robust mild steel body, this machine features precision-engineered rollers and adjustable clearance settings for different groundnut sizes. Ideal for medium to large-scale processing units, it ensures high throughput while maintaining excellent kernel quality.",
     shortDescription:
@@ -70,7 +70,7 @@ export const products: Product[] = [
     slug: "almond-decorticator",
     category: "decorticator",
     categoryLabel: "Decorticator",
-    image: "/images/products/almond-decorticator.webp",
+    image: "/PRABHATIRONWORKS/images/products/almond-decorticator.webp",
     description:
       "Specially designed Almond Decorticator featuring a rotating drum mechanism for gentle yet effective almond shell cracking. The machine preserves kernel integrity while achieving high throughput. Constructed with premium mild steel and precision bearings, it is engineered for continuous operation in commercial processing plants.",
     shortDescription:
@@ -106,8 +106,8 @@ export const products: Product[] = [
     slug: "groundnut-thresher",
     category: "thresher",
     categoryLabel: "Thresher",
-    image: "/images/products/groundnut-thresher.webp",
-    altImage: "/images/products/groundnut-thresher-alt.webp",
+    image: "/PRABHATIRONWORKS/images/products/groundnut-thresher.webp",
+    altImage: "/PRABHATIRONWORKS/images/products/groundnut-thresher-alt.webp",
     description:
       "Industrial-grade Groundnut Thresher Machine engineered for rapid separation of groundnut pods from vines. This high-capacity machine features a multi-fan cleaning system and a heavy-duty MS + Cast Iron frame for durability in demanding field conditions. The tractor-mountable design ensures mobility across farm locations.",
     shortDescription:
@@ -144,7 +144,7 @@ export const products: Product[] = [
     slug: "paddy-thresher",
     category: "thresher",
     categoryLabel: "Thresher",
-    image: "/images/products/paddy-thresher.webp",
+    image: "/PRABHATIRONWORKS/images/products/paddy-thresher.webp",
     description:
       "Premium 5-Fan Paddy Thresher designed for efficient rice paddy threshing with multi-stage grain cleaning. The five-fan system ensures thorough separation of grain from chaff, straw, and dust. Built on a robust wheeled chassis for easy field transportation, this machine is the preferred choice for rice farmers across Gujarat.",
     shortDescription:
@@ -181,7 +181,7 @@ export const products: Product[] = [
     slug: "multi-crop-thresher",
     category: "thresher",
     categoryLabel: "Thresher",
-    image: "/images/products/multi-crop-thresher.webp",
+    image: "/PRABHATIRONWORKS/images/products/multi-crop-thresher.webp",
     description:
       "Versatile Multi-Crop Thresher capable of processing wheat, paddy, soybean, sunflower, and other grain crops. This heavy-duty machine features interchangeable concaves and adjustable settings, making it the ultimate all-season investment for farmers handling multiple crop types throughout the year.",
     shortDescription:
@@ -218,7 +218,7 @@ export const products: Product[] = [
     slug: "garlic-separator",
     category: "separator",
     categoryLabel: "Separator",
-    image: "/images/products/garlic-separator.webp",
+    image: "/PRABHATIRONWORKS/images/products/garlic-separator.webp",
     description:
       "Efficient Garlic Separator Machine designed for quick separation of garlic cloves from bulbs without damaging the skin. Featuring a gentle rubberized separation mechanism and stainless steel contact surfaces, this machine is ideal for food-grade processing. Compact and easy to operate, it is perfect for spice processing units and commercial kitchens.",
     shortDescription:
