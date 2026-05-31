@@ -100,12 +100,12 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           className="flex flex-wrap justify-center gap-x-2 sm:gap-x-3 mb-2"
         >
           {titleText.split(" ").map((word, wordIndex) => (
-            <span key={wordIndex} className="inline-block whitespace-nowrap">
+            <span key={wordIndex} className="inline-flex flex-row whitespace-nowrap">
               {word.split("").map((char, charIndex) => (
                 <motion.span
                   key={charIndex}
                   variants={letterVariants}
-                  className="inline-block text-xl sm:text-2xl md:text-4xl font-display font-bold tracking-wider text-white"
+                  className="inline-block text-lg sm:text-2xl md:text-4xl font-display font-bold tracking-wider text-white"
                 >
                   {char}
                 </motion.span>
