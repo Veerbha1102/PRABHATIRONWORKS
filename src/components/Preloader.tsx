@@ -97,18 +97,20 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-wrap justify-center mb-2"
+          className="flex flex-wrap justify-center gap-x-2 sm:gap-x-3 mb-2"
         >
-          {titleText.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              variants={letterVariants}
-              className={`text-2xl sm:text-3xl md:text-4xl font-display font-bold tracking-wider ${
-                char === " " ? "mr-4" : "text-white"
-              }`}
-            >
-              {char}
-            </motion.span>
+          {titleText.split(" ").map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block whitespace-nowrap">
+              {word.split("").map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  variants={letterVariants}
+                  className="inline-block text-xl sm:text-2xl md:text-4xl font-display font-bold tracking-wider text-white"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </motion.div>
 

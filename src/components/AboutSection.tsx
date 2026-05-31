@@ -58,11 +58,11 @@ function StatCard({
       <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary-400 mb-4 group-hover:bg-primary/20 transition-colors">
         <Icon size={28} />
       </div>
-      <div className="text-3xl md:text-4xl font-display font-bold text-white mb-1">
+      <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-1">
         {count}
         <span className="text-primary-400">{suffix}</span>
       </div>
-      <div className="text-sm text-gray-400 uppercase tracking-wider">{label}</div>
+      <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">{label}</div>
     </motion.div>
   );
 }

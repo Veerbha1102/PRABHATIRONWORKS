@@ -116,7 +116,7 @@ export default function HeroSection() {
           {/* Heading */}
           <motion.h2
             variants={childVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6"
           >
             <span className="text-white">Powering </span>
             <span className="gradient-text">Agriculture</span>
