@@ -11,8 +11,14 @@ export default function BrochureSection() {
   const generatePDF = useCallback(async () => {
     setIsGenerating(true);
     try {
-      // Dynamically import html2pdf.js to avoid SSR issues
-      const html2pdf = (await import("html2pdf.js")).default;
+      // Dynamically import html2pdf.js to avoid SSR issues and support Turbopack namespaces
+      const html2pdfModule = await import("html2pdf.js");
+      const html2pdf = (html2pdfModule as any).default || html2pdfModule;
+
+      if (typeof html2pdf !== "function") {
+        console.error("html2pdf is not a factory function", html2pdf);
+        return;
+      }
 
       const brochureEl = document.getElementById("brochure-content");
       if (!brochureEl) {

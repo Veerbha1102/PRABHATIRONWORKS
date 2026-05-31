@@ -51,13 +51,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/PRABHATIRONWORKS/favicon.ico" />
-      </head>
-      <body className="font-sans antialiased">
         {/* ── Suppress Tawk.to / CORS log console errors during local development ── */}
-        <Script id="suppress-console-errors" strategy="beforeInteractive">
-          {`
-            (function() {
-              if (typeof window !== 'undefined') {
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
                 var orgError = console.error;
                 console.error = function() {
                   var firstArg = arguments[0];
@@ -69,11 +67,12 @@ export default function RootLayout({
                   }
                   orgError.apply(console, arguments);
                 };
-              }
-            })();
-          `}
-        </Script>
-
+              })();
+            `
+          }}
+        />
+      </head>
+      <body className="font-sans antialiased">
         {children}
 
         {/* ── Tawk.to Live Chat Widget ── */}
