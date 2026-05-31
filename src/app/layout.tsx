@@ -16,27 +16,26 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Prabhat Iron Works | Premium Agricultural Machinery Manufacturer",
+  title: "Prabhat Iron Works | Premium Agricultural Machinery Manufacturer Rajkot Gujarat",
   description:
-    "Prabhat Iron Works — 12+ years of excellence in manufacturing Groundnut Decorticators, Almond Decorticators, Thresher Machines, Paddy Threshers & Garlic Separators. Based in Jasdan, Rajkot, Gujarat.",
+    "Prabhat Iron Works — 12+ years of excellence manufacturing Groundnut Decorticators, Almond Decorticators, Thresher Machines, Paddy Threshers & Garlic Separators. Best agricultural machinery manufacturer in Jasdan, Rajkot, Gujarat, India.",
   keywords: [
-    "groundnut decorticator",
-    "almond decorticator",
-    "paddy thresher",
-    "thresher machine",
-    "garlic separator",
-    "agricultural machinery",
-    "farming equipment",
-    "Prabhat Iron Works",
-    "Jasdan",
-    "Rajkot",
-    "Gujarat",
+    "groundnut decorticator manufacturer",
+    "groundnut decorticator Rajkot",
+    "almond decorticator manufacturer Gujarat",
+    "paddy thresher price India",
+    "thresher machine manufacturer Jasdan",
+    "garlic separator machine price",
+    "agricultural machinery manufacturer in Gujarat",
+    "farming equipment suppliers Rajkot",
+    "Prabhat Iron Works Jasdan",
+    "peanut shelling machine factory Saurashtra"
   ],
   authors: [{ name: "Prabhat Iron Works" }],
   openGraph: {
-    title: "Prabhat Iron Works | Premium Agricultural Machinery",
+    title: "Prabhat Iron Works | Premium Agricultural Machinery Rajkot Gujarat",
     description:
-      "12+ years manufacturing high-quality agricultural equipment. Groundnut & Almond Decorticators, Threshers, Garlic Separators.",
+      "12+ years manufacturing high-quality agricultural equipment. Groundnut & Almond Decorticators, Threshers, Garlic Separators based in Jasdan, Rajkot.",
     type: "website",
     locale: "en_IN",
   },
@@ -51,6 +50,77 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/PRABHATIRONWORKS/favicon.ico" />
+        
+        {/* ── JSON-LD Structured Data Schema for Local Business / Google Search & Maps SEO ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Prabhat Iron Works",
+              "image": "https://veerbha1102.github.io/PRABHATIRONWORKS/images/logo.png",
+              "@id": "https://veerbha1102.github.io/PRABHATIRONWORKS",
+              "url": "https://veerbha1102.github.io/PRABHATIRONWORKS",
+              "telephone": "+919825216584",
+              "priceRange": "₹₹",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "14, Geeta Nagar, Atkot Road",
+                "addressLocality": "Jasdan",
+                "addressRegion": "Gujarat",
+                "postalCode": "360050",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 22.0185,
+                "longitude": 71.2185
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "09:00",
+                "closes": "19:00"
+              },
+              "sameAs": [
+                "https://github.com/Veerbha1102/PRABHATIRONWORKS"
+              ],
+              "areaServed": [
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Gujarat"
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Rajasthan"
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Madhya Pradesh"
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Maharashtra"
+                }
+              ],
+              "knowsAbout": [
+                "Groundnut Decorticators",
+                "Almond Decorticators",
+                "Garlic Separators",
+                "Agricultural Threshers",
+                "Agricultural Machinery Manufacturing"
+              ]
+            })
+          }}
+        />
         {/* ── Suppress Tawk.to / CORS log console errors during local development ── */}
         <script
           dangerouslySetInnerHTML={{

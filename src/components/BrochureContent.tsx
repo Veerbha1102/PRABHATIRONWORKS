@@ -30,7 +30,7 @@ export default function BrochureContent() {
         style={{
           pageBreakAfter: "always",
           height: "297mm",
-          background: `linear-gradient(135deg, ${darkColor} 0%, #0E1422 50%, ${darkColor} 100%)`,
+          background: "#FAF9F6", // Warm off-white
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -48,46 +48,63 @@ export default function BrochureContent() {
             top: 0,
             left: 0,
             right: 0,
-            height: "6px",
+            height: "8px",
             background: `linear-gradient(90deg, ${primaryColor}, ${accentColor}, ${primaryColor})`,
+          }}
+        />
+
+        {/* Outer decorative borders to give catalog look */}
+        <div
+          style={{
+            position: "absolute",
+            top: "15mm",
+            bottom: "15mm",
+            left: "15mm",
+            right: "15mm",
+            border: `1px solid ${primaryColor}30`,
+            borderRadius: "4px",
+            pointerEvents: "none",
           }}
         />
 
         {/* Logo placeholder */}
         <div
           style={{
-            width: "80px",
-            height: "80px",
-            borderRadius: "20px",
-            backgroundColor: "rgba(107, 143, 60, 0.2)",
+            width: "90px",
+            height: "90px",
+            borderRadius: "24px",
+            backgroundColor: "#FFFFFF",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: "24px",
-            border: `2px solid ${primaryColor}`,
+            marginBottom: "28px",
+            border: `3px solid ${primaryColor}`,
+            boxShadow: "0 8px 24px rgba(107, 143, 60, 0.1)",
           }}
         >
-          <span style={{ fontSize: "36px", color: primaryColor, fontWeight: "bold" }}>P</span>
+          <span style={{ fontSize: "40px", color: primaryColor, fontWeight: "800", fontFamily: "'Outfit', sans-serif" }}>P</span>
         </div>
 
         <h1
           style={{
             fontSize: "36px",
             fontWeight: "800",
-            color: "#FFFFFF",
+            color: "#111827", // High contrast dark
             marginBottom: "8px",
             letterSpacing: "2px",
+            fontFamily: "'Outfit', sans-serif",
           }}
         >
           PRABHAT IRON WORKS
         </h1>
         <p
           style={{
-            fontSize: "14px",
-            color: accentColor,
-            letterSpacing: "4px",
+            fontSize: "12px",
+            color: primaryColor, // Beautiful agricultural green
+            letterSpacing: "5px",
             textTransform: "uppercase",
-            marginBottom: "40px",
+            fontWeight: "bold",
+            marginBottom: "35px",
           }}
         >
           Agri-Industrial Solutions
@@ -95,8 +112,8 @@ export default function BrochureContent() {
 
         <div
           style={{
-            width: "60px",
-            height: "2px",
+            width: "80px",
+            height: "3px",
             background: `linear-gradient(90deg, ${primaryColor}, ${accentColor})`,
             marginBottom: "40px",
           }}
@@ -104,16 +121,34 @@ export default function BrochureContent() {
 
         <h2
           style={{
-            fontSize: "28px",
-            fontWeight: "600",
-            color: "#FFFFFF",
+            fontSize: "26px",
+            fontWeight: "700",
+            color: "#111827",
             marginBottom: "16px",
           }}
         >
-          Product Catalogue 2024
+          Product Catalogue
         </h2>
-        <p style={{ fontSize: "14px", color: "#94A3B8", maxWidth: "300px", lineHeight: "1.6" }}>
-          Complete specifications, pricing, and technical details for our agricultural machinery range.
+        
+        {/* Edition badge */}
+        <div
+          style={{
+            padding: "6px 16px",
+            backgroundColor: `${accentColor}15`,
+            border: `1px solid ${accentColor}35`,
+            borderRadius: "20px",
+            fontSize: "12px",
+            fontWeight: "bold",
+            color: "#B88D2E",
+            marginBottom: "24px",
+            display: "inline-block",
+          }}
+        >
+          2024 EDITION • COMPLETE TECH SPECS
+        </div>
+
+        <p style={{ fontSize: "13px", color: "#4B5563", maxWidth: "340px", lineHeight: "1.6", margin: "0 auto" }}>
+          Premium Agricultural Shelling, Threshing, and Grading Machinery. Manufactured in Jasdan, Gujarat.
         </p>
 
         {/* Bottom contact bar */}
@@ -123,17 +158,20 @@ export default function BrochureContent() {
             bottom: "20mm",
             left: "20mm",
             right: "20mm",
-            padding: "12px 20px",
-            backgroundColor: "rgba(255,255,255,0.05)",
-            borderRadius: "8px",
+            padding: "16px 24px",
+            backgroundColor: "#FFFFFF",
+            border: "1px solid #E5E7EB",
+            borderRadius: "12px",
             display: "flex",
             justifyContent: "space-between",
-            fontSize: "10px",
-            color: "#94A3B8",
+            fontSize: "11px",
+            color: "#4B5563",
+            fontWeight: "500",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.02)",
           }}
         >
           <span>📍 Jasdan, Rajkot, Gujarat</span>
-          <span>📞 Contact for pricing</span>
+          <span style={{ color: primaryColor, fontWeight: "bold" }}>📞 +91 98252 16584</span>
           <span>🏭 12+ Years Experience</span>
         </div>
       </div>
@@ -409,19 +447,34 @@ export default function BrochureContent() {
       <div
         style={{
           padding: "15mm 20mm",
-          background: `linear-gradient(135deg, ${darkColor}, #0E1422)`,
+          background: "#FAF9F6", // Warm off-white
           minHeight: "297mm",
-          color: "#FFFFFF",
+          color: "#111827",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          position: "relative",
         }}
       >
+        {/* Decorative outer border matching cover page */}
+        <div
+          style={{
+            position: "absolute",
+            top: "15mm",
+            bottom: "15mm",
+            left: "15mm",
+            right: "15mm",
+            border: `1px solid ${primaryColor}30`,
+            borderRadius: "4px",
+            pointerEvents: "none",
+          }}
+        />
+
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
-          <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "8px" }}>
+          <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#111827", marginBottom: "8px", fontFamily: "'Outfit', sans-serif" }}>
             Get in Touch
           </h2>
-          <p style={{ fontSize: "14px", color: "#94A3B8" }}>
+          <p style={{ fontSize: "13px", color: "#4B5563" }}>
             Ready to upgrade your agricultural processing? Contact us today.
           </p>
         </div>
@@ -429,33 +482,35 @@ export default function BrochureContent() {
         <div
           style={{
             display: "flex",
-            gap: "24px",
+            gap: "20px",
             justifyContent: "center",
             flexWrap: "wrap",
+            margin: "0 10px",
           }}
         >
           {[
-            { icon: "📍", title: "Address", info: "14, Geeta Nagar, Atkot Road,\nJasdan, Rajkot-360050, Gujarat" },
-            { icon: "🏭", title: "Experience", info: "12+ Years of Excellence\nin Agricultural Machinery" },
-            { icon: "📦", title: "Products", info: "Decorticators • Threshers\nSeparators • Custom Machines" },
+            { icon: "📍", title: "Address Details", info: "14, Geeta Nagar, Atkot Road,\nJasdan, Rajkot-360050, Gujarat" },
+            { icon: "📞", title: "Direct Contact", info: "+91 98252 16584\n+91 94277 31210\ninfo@prabhatironworks.com" },
+            { icon: "📦", title: "Products Offered", info: "Groundnut Decorticators\nShelling Machines & Threshers\nCustom Farming Equipment" },
           ].map((item) => (
             <div
               key={item.title}
               style={{
                 flex: "1",
-                minWidth: "150px",
-                padding: "24px",
-                backgroundColor: "rgba(255,255,255,0.05)",
+                minWidth: "160px",
+                padding: "24px 16px",
+                backgroundColor: "#FFFFFF",
                 borderRadius: "12px",
                 textAlign: "center",
-                border: "1px solid rgba(255,255,255,0.1)",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.02)",
               }}
             >
-              <div style={{ fontSize: "32px", marginBottom: "12px" }}>{item.icon}</div>
-              <h3 style={{ fontSize: "14px", fontWeight: "600", color: accentColor, marginBottom: "8px" }}>
+              <div style={{ fontSize: "28px", marginBottom: "12px" }}>{item.icon}</div>
+              <h3 style={{ fontSize: "13px", fontWeight: "700", color: primaryColor, marginBottom: "8px" }}>
                 {item.title}
               </h3>
-              <p style={{ fontSize: "11px", lineHeight: "1.6", color: "#94A3B8", whiteSpace: "pre-line" }}>
+              <p style={{ fontSize: "11px", lineHeight: "1.6", color: "#4B5563", whiteSpace: "pre-line", fontWeight: "500" }}>
                 {item.info}
               </p>
             </div>
@@ -466,12 +521,12 @@ export default function BrochureContent() {
         <div
           style={{
             textAlign: "center",
-            marginTop: "40px",
+            marginTop: "45px",
             paddingTop: "20px",
-            borderTop: "1px solid rgba(255,255,255,0.1)",
+            borderTop: "1px solid #E5E7EB",
           }}
         >
-          <p style={{ fontSize: "10px", color: "#64748B" }}>
+          <p style={{ fontSize: "10px", color: "#9CA3AF" }}>
             © 2024 Prabhat Iron Works. All rights reserved. | Jasdan, Rajkot, Gujarat, India
           </p>
         </div>
